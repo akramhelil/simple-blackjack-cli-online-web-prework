@@ -11,6 +11,12 @@ def display_card_total
   puts "You cards add up to #{card_total}"
 end
 
+def initial_round
+  first_round = deal_card + deal_card
+  display_card_total(first_round)
+  return first_round
+end
+
 
 def prompt_user
   puts "Type 'h' to hit or 's' to stay."
@@ -22,12 +28,6 @@ end
 
 def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
-end
-
-def initial_round
-  first_round = deal_card + deal_card
-  display_card_total(first_round)
-  return first_round
 end
 
 def hit?(card_total)
