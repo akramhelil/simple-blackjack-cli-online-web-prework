@@ -7,15 +7,8 @@ def deal_card
   rand(1..11)
 end
 
-
-def initial_round
-  first_round = deal_card + deal_card
-  display_card_total(first_round)
-  return first_round
-end
-
-def display_card_total(7)
-  puts "You cards add up to #{card_total}"
+def display_card_total(n)
+  puts "You cards add up to #{n}"
 end
 
 def prompt_user
@@ -27,6 +20,7 @@ def get_user_input
 end
 
 def end_game(card_total)
+ if card_total > 21 
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
