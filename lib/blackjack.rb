@@ -17,7 +17,6 @@ def initial_round
   return first_round
 end
 
-
 def prompt_user
   puts "Type 'h' to hit or 's' to stay."
 end
