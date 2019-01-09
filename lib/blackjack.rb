@@ -8,7 +8,7 @@ def deal_card
 end
 
 def display_card_total
-  puts "You cards add up to #{total_card}"
+  puts "You cards add up to #{card_total}"
 end
 
 
@@ -20,8 +20,8 @@ def get_user_input
   gets.chomp.strip
 end
 
-def end_game(total_card)
-  puts "Sorry, you hit #{total_card}. Thanks for playing!"
+def end_game(card_total)
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
 def initial_round
@@ -30,7 +30,7 @@ def initial_round
   return first_round
 end
 
-def hit?(total_card)
+def hit?(card_total)
   prompt_user
     input = get_user_input
     until input == 'h' || input == 's'
@@ -41,7 +41,7 @@ def hit?(total_card)
     if input == 'h'
       total_card +=deal_card
     elsif input = 's'
-      total_card
+      card_total
     end
 end
 
